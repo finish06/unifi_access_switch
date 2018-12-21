@@ -100,7 +100,7 @@ class UnifiController(ToggleEntity):
         """Return true if device is blocked"""
         return self._state == STATE_ON
 
-    def turn_on(self, mac):
+    def turn_on(self):
         """Block the device"""
         _LOGGER.debug("Blocking " + self._mac)
         self._controller.block_client(mac=self._mac)
