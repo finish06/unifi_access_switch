@@ -11,7 +11,6 @@ switch:
     host: unifi.domain.name
     username: username
     password: password
-    name: device_name
     mac_address: 00:00:00:00:00:00
 ```
 
