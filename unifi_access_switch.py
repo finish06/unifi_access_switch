@@ -104,11 +104,13 @@ class UnifiController(ToggleEntity):
         """Block the device"""
         _LOGGER.debug("Blocking " + self._mac)
         self._controller.block_client(mac=self._mac)
+        self.update
 
     def turn_off(self):
         """Unblock device"""
         _LOGGER.debug("Unblocking " + self._mac)
         self._controller.unblock_client(mac=self._mac)
+        self.update
 
     def update(self):
         """Get the latest state from the Controller"""
